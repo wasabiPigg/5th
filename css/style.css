@@ -2,10 +2,12 @@
 
 html {
     min-height: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 body {
     background: linear-gradient(rgb(69,150,215), rgb(76,59,235) 30%, rgb(164,54,247) 70%, rgb(90,41,195));
+    background-attachment: fixed;
     margin: 0;
 }
 
@@ -13,6 +15,7 @@ body {
     /* PC用 */
     body {
         background: linear-gradient(rgba(69,150,215,0.7), rgba(76,59,235,0.7) 30%, rgba(164,54,247,0.7) 70%, rgba(90,41,195,0.7));
+        background-attachment: fixed;
     }
 }
 
@@ -21,7 +24,8 @@ body {
     height:100vh;
     background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 0),
                       linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
-    background-size: 40px 40px;
+    background-size: 30px 30px;
+    background-attachment: fixed;
     margin: 0;
 }
 
@@ -66,14 +70,15 @@ body {
         max-width: 1000px;
         height: 100vh;
         background: linear-gradient(rgb(69,150,215), rgb(76,59,235) 30%, rgb(164,54,247) 70%, rgb(90,41,195));
-
+        background-attachment: fixed;
     }
 
     .content_pc {
         height: 100vh;
         background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 0),
                           linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 0);
-        background-size: 40px 40px;
+        background-size: 30px 30px;
+        background-attachment: fixed;
     }
 
     .sp {
@@ -87,10 +92,23 @@ body {
 
 .movie h1 {
     line-height: 1.5rem;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 5px #ff00de, 0 0 10px #ff00de, 0 0 50px;
+    /* text-shadow: 
+    0 1px 2px rgba(0,0,0, 0.6), 
+    2px 1px 4px rgba(0,0,0, 0.3), 
+    2px 4px 3px rgba(3,0,128, 0.3), 
+    0 0 7px 2px rgba(0,208,255, 0.6), 
+    inset 0 1px 2px rgba(0,0,0, 0.6), 
+    inset 2px 1px 4px rgba(0,0,0, 0.3), 
+    inset 2px 4px 3px rgba(3,0,128, 0.3), 
+    inset 0 0 7px 2px rgba(0,208,255, 0.6);
+  animation: flickering 5s infinite; */
 }
 
 .movie p {
     line-height: 1.2rem;
+    color: white;
 }
 
 span {
@@ -111,14 +129,64 @@ span {
     
 }
 
+.youtube_wrapper {
+    margin: auto;
+    width: 66vw;
+}
+
+.youtube_before {
+    height: 2rem;
+    background: rgb(3,15,199);
+    border: solid rgb(240,90,255) 1.2px;
+}
+
+.youtube {
+    padding-top: 2vw;
+    background: rgba(255,255,255,0.5);
+    border: solid rgb(240,90,255) 1.2px;
+}
+
+.youtube_after {
+    height: 1rem;
+    background: rgb(3,15,199);
+    border: solid rgb(240,90,255) 1.2px;
+}
+
 iframe {
     width: 64vw;
     height: 36vw;
 }
 
 @media screen and (min-width: 960px) {
+    .youtube_wrapper {
+        margin: auto;
+        width: 500px;
+    }
+
+    .youtube {
+
+        height: 285px;
+        padding-top: 15px;
+        background: rgba(255,255,255,0.5);
+    
+    }
     iframe {
         max-width: 480px;
         max-height: 270px;
     }
+}
+
+.share_btn {
+    padding: 0.2em 2em;
+    border-radius: 50px;
+    color: #fff;
+    background: rgb(28,160,240);
+    text-decoration: none;
+}
+.fa-twitter {
+    margin-right: 0.5rem;
+}
+
+.footer {
+    margin-bottom: 1rem;
 }
